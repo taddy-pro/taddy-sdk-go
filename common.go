@@ -50,22 +50,11 @@ type ErrorResponse struct {
 }
 
 func (client *Client) Start(user *User, start string) error {
-	return client.call(POST, "/start", &StartRequest{
+	return client.call(POST, "/events/start", &StartRequest{
 		BasicRequest: BasicRequest{
 			PubId: client.pubId,
 			User:  *user,
 		},
 		Start: start,
 	}, nil)
-}
-
-func (client *Client) GetInitData(user *User) (*ResourceInitData, error) {
-	var result *ResourceInitData
-	err := client.call(POST, "/start", &GetInitDataRequest{
-		BasicRequest: BasicRequest{
-			PubId: client.pubId,
-			User:  *user,
-		},
-	}, &result)
-	return result, err
 }
