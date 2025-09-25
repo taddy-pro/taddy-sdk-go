@@ -9,6 +9,7 @@ import (
 	"log/slog"
 	"net/http"
 	"net/url"
+	"os"
 )
 
 type Client struct {
@@ -18,6 +19,12 @@ type Client struct {
 }
 
 func New(pubId string, log *slog.Logger) *Client {
+	if log == nil {
+		consoleHandler := slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
+			Level: slog.LevelInfo,
+		})
+		log = slog.New(consoleHandler)
+	}
 	return &Client{pubId: pubId, apiUrl: "https://api.taddy.pro/v1", log: log}
 }
 

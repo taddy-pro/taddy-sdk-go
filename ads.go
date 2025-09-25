@@ -24,15 +24,15 @@ func (client *Client) SendAdImpression(id string) error {
 }
 
 type Ad struct {
-	Id          string  `json:"id"`
-	Title       *string `json:"title"`
-	Description *string `json:"description"`
-	Image       *string `json:"image"`
-	Video       *string `json:"video"`
-	Icon        *string `json:"icon"`
-	Text        *string `json:"text"`
-	Button      *string `json:"button"`
-	Link        string  `json:"link"`
+	Id          string `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Image       string `json:"image"`
+	Video       string `json:"video"`
+	Icon        string `json:"icon"`
+	Text        string `json:"text"`
+	Button      string `json:"button"`
+	Link        string `json:"link"`
 }
 
 type GetAdRequest struct {

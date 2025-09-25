@@ -8,17 +8,17 @@ const (
 )
 
 type User struct {
-	Id        int64   `json:"id"`
-	FirstName *string `json:"first_name,omitempty"`
-	LastName  *string `json:"last_name,omitempty"`
-	Username  *string `json:"username,omitempty"`
-	Premium   bool    `json:"premium,omitempty"`
-	Language  string  `json:"language,omitempty"`
-	Country   *string `json:"country,omitempty"`
-	Gender    *string `json:"gender,omitempty"`
-	IP        *string `json:"ip,omitempty"`
-	UserAgent *string `json:"userAgent,omitempty"`
-	BirthDate *string `json:"birthDate,omitempty"`
+	Id        int64  `json:"id"`
+	FirstName string `json:"first_name,omitempty"`
+	LastName  string `json:"last_name,omitempty"`
+	Username  string `json:"username,omitempty"`
+	Premium   bool   `json:"premium,omitempty"`
+	Language  string `json:"language,omitempty"`
+	Country   string `json:"country,omitempty"`
+	Gender    string `json:"gender,omitempty"`
+	IP        string `json:"ip,omitempty"`
+	UserAgent string `json:"userAgent,omitempty"`
+	BirthDate string `json:"birthDate,omitempty"`
 }
 
 type BasicRequest struct {
