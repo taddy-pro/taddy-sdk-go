@@ -12,7 +12,7 @@ type User struct {
 	FirstName string `json:"first_name,omitempty"`
 	LastName  string `json:"last_name,omitempty"`
 	Username  string `json:"username,omitempty"`
-	Premium   bool   `json:"premium,omitempty"`
+	Premium   bool   `json:"premium"`
 	Language  string `json:"language,omitempty"`
 	Country   string `json:"country,omitempty"`
 	Gender    string `json:"gender,omitempty"`
