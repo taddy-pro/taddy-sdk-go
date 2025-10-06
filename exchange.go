@@ -42,7 +42,7 @@ type ExchangeItem struct {
 }
 
 type GetExchangeRequestOptions struct {
-	Limit           int    `json:"limit,default:4"`
+	Limit           int    `json:"limit,default=4"`
 	ImageFormat     string `json:"imageFormat,default=webp"`
 	AutoImpressions bool   `json:"autoImpressions,default=false"`
 }
